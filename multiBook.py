@@ -56,7 +56,6 @@ def booking(date, cookie, book_reason):
         'start_time': f'{date} {startTime}:00:00',
         'end_time': f'{date} {endTime}:00:00'
     }
-    print("header : ", headers)
     print("data : ", data)
     response = requests.post(url, headers=headers, data=data)
     print("Response : ", response, response.text)

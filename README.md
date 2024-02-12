@@ -17,7 +17,7 @@ $ py ./multiBook.py
 09:00 ~ 10:00
 하이웍스 로그인 후 취득되는 쿠키를 입력하세요 : h_idremember=false; h_officeid=softcamp.co.kr; PHPSESSID=....
 예약 사용 용도를 입력하세요. [CloudR&D부 Daily Scrum] : CloudR&D부 Daily Scrum
-요청 날짜 : 2024-04-01
+요청 날짜 : 2024-04-11
 data :  {'category_no': '868', 'resource_no[]': '2341', 'date': '2024-04-11', 'booking_reason': 'CloudR&D부 Daily Scrum', 'start_time': '2024-04-11 09:00:00', 'end_time': '2024-04-11 10:00:00'}
 Response :  <Response [200]> {"resultCode":"SUCCESS","result":null,"message":null,"layerID":null}
 ...

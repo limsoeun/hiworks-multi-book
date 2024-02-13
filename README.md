@@ -32,7 +32,7 @@ Response :  <Response [200]> {"resultCode":"SUCCESS","result":null,"message":nul
 pip install requests 
 ```
 
-### Compiles for run
+### Compiles for development
 
 ```
 py ./multiBook.py

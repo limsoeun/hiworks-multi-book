@@ -8,7 +8,7 @@
 
 <br/>
 
-## Get Start 1
+## Get Start
 
 ##### Install dependencies
 

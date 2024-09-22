@@ -1,6 +1,6 @@
 # Hiworks multi book
 
-지정한 기간의 월~금요일에 [같은 회의실/같은 시간/같은 회의 예약 사유]로 예약해줍니다.
+지정한 기간의 월~금요일에 [선택한 회의실/선택한 시간/기재한 회의 예약 사유]로 예약해줍니다.
 
 ## Reason for production
 
@@ -13,7 +13,8 @@
 ##### Install dependencies
 
 ```
-pip install requests 
+pip install requests
+pip install python-dotenv 
 ```
 
 ## Execute

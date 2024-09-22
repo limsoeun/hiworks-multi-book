@@ -6,7 +6,7 @@ global start_date
 global end_date
 global start_time
 global end_time
-
+global resource_no
 
 def set_cookie(param: RequestsCookieJar):
     global cookie
@@ -31,4 +31,7 @@ def set_start_time(param: str):
 def set_end_time(param: str):
     global end_time
     end_time = param
-    
+   
+def set_resource_no(param: str):
+    global resource_no
+    resource_no = param 

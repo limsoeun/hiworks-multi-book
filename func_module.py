@@ -1,9 +1,28 @@
 import re
+import os
+import json
 from datetime import datetime, timedelta
 
 import global_resource
 import api_module
-        
+
+def input_room_number():
+    """ 예약 회의실 입력 """
+    with open('config.json', 'r', encoding='utf-8') as file:
+        config = json.load(file)
+    room_infos = config.get('resource_no', {})
+    codes = list(map(lambda x: x['code'], room_infos))
+    for data in room_infos:
+        print(f"{data['name']} Number: {data['code']}")
+    room_no = input("예약할 회의실 번호를 입력하세요 : ")
+    if room_no not in codes:
+        print("존재하지 않는 회의실 번호입니다.")
+        input_room_number()
+    else:
+        resource_info = next(filter(lambda x: x['code'] == room_no, room_infos), None)
+        resource_no = resource_info['resource_no']
+        global_resource.set_resource_no(resource_no)
+
 def input_book_date():
     """ 예약 날짜 입력 """
     start_date = input("예약 시작 날짜를 입력하세요 [202x-0x-0x] : ")
@@ -14,6 +33,10 @@ def input_book_date():
     global_resource.set_start_time(start_time)
     end_time = input("예약 종료 시간을 입력하세요 [9 ~ 18] : ")
     global_resource.set_end_time(end_time)
+
+    inputValid = check_input_valid()
+    if inputValid == False:
+        input_book_date()
 
 def check_input_valid():
     """ 입력값의 형식 유효성 검사 """

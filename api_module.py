@@ -32,6 +32,7 @@ def booking(date):
     book_reason = global_resource.book_reason
     start_time = global_resource.start_time
     end_time = global_resource.end_time
+    resource_no = global_resource.resource_no
 
     url = 'https://booking.office.hiworks.com/softcamp.co.kr/booking/bookingAjax/addBooking'
     
@@ -40,7 +41,7 @@ def booking(date):
     }
     data = {
         'category_no': '868',
-        'resource_no[]': '2341', # 1번 회의실
+        'resource_no[]': resource_no, #'2341', # 1번 회의실
         'date': date,
         'booking_reason': book_reason,
         'start_time': f'{date} {start_time}:00:00',

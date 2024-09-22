@@ -1,0 +1,24 @@
+{
+  "resource_no": [
+    {
+      "code": "1",
+      "name": "1회의실",
+      "resource_no": "2341"
+    },
+    {
+      "code": "2",
+      "name": "2회의실",
+      "resource_no": "1242"
+    },
+    {
+      "code": "3",
+      "name": "3회의실",
+      "resource_no": "1243"
+    },
+    {
+      "code": "0",
+      "name": "대회의실",
+      "resource_no": "883"
+    }
+  ]
+}

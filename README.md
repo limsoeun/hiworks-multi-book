@@ -8,7 +8,7 @@
 
 <br/>
 
-## Quick Start
+## Get Start
 
 ##### Install dependencies
 

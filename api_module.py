@@ -1,13 +1,22 @@
 import requests
+import json
 
 import global_resource
 
 def login():
     """ 로그인 API 호출 """
     url = 'https://auth-api.office.hiworks.com/office-web/login'
-    hiworks_id = input('Hiworks ID를 입력하세요 : ')
-    hiworks_pw = input('Hiworks 비밀번호를 입력하세요 : ')
-    
+    with open('config.json', 'r', encoding='utf-8') as file:
+        config = json.load(file)
+    hiworks_id = config.get('user_id', None)
+    hiworks_pw = config.get('user_pw', None)
+
+    if not hiworks_id:
+        hiworks_id = input('Hiworks ID를 입력하세요 : ')
+
+    if not hiworks_pw:
+        hiworks_pw = input('Hiworks 비밀번호를 입력하세요 : ')
+
     headers = {
         'Accept': 'application/json'
     }
@@ -20,14 +29,14 @@ def login():
     print("Response : ", response, response.text)
     if response.status_code == 200:
         global_resource.set_cookie(response.cookies)
-        print('로그인 완료')
+        print(f"{hiworks_id} 로그인 완료")
         return True
     else:
         print('로그인 실패')
         return False
 
 def booking(date):
-    """ 하이웍스 1번 회의실 예약 API 호출 """
+    """ 하이웍스 회의실 예약 API 호출 """
     cookie = global_resource.cookie
     book_reason = global_resource.book_reason
     start_time = global_resource.start_time

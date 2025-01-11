@@ -1,24 +1,46 @@
 {
+  "user_id": "",
+  "user_pw": "",
   "resource_no": [
-    {
-      "code": "1",
-      "name": "1회의실",
-      "resource_no": "2341"
-    },
-    {
-      "code": "2",
-      "name": "2회의실",
-      "resource_no": "1242"
-    },
-    {
-      "code": "3",
-      "name": "3회의실",
-      "resource_no": "1243"
-    },
     {
       "code": "0",
       "name": "대회의실",
-      "resource_no": "883"
+      "resource_no": "2586"
+    },
+    {
+      "code": "1",
+      "name": "3층-1회의실",
+      "resource_no": "2577"
+    },
+    {
+      "code": "2",
+      "name": "3층-2회의실",
+      "resource_no": "2578"
+    },
+    {
+      "code": "3",
+      "name": "4층-3회의실",
+      "resource_no": "2579"
+    },
+    {
+      "code": "4",
+      "name": "4층-4회의실",
+      "resource_no": "2580"
+    },
+    {
+      "code": "5",
+      "name": "5층-5회의실",
+      "resource_no": "2581"
+    },
+    {
+      "code": "6",
+      "name": "5층-6회의실",
+      "resource_no": "2582"
+    },
+    {
+      "code": "7",
+      "name": "5층-7회의실",
+      "resource_no": "2583"
     }
   ]
 }

@@ -34,4 +34,4 @@ def set_end_time(param: str):
    
 def set_resource_no(param: str):
     global resource_no
-    resource_no = param 
+    resource_no = param
